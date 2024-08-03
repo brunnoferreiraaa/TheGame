@@ -1,14 +1,10 @@
 programa {
   inclua biblioteca Util --> u
 
-  /**
-   * PARA FAZER:
-   * 
-   
-   * 
+  /*
    * IDEIAS:
    * 
-   * Fazer uma pausa para não começar o jogo logo quando acessa a opção 1. Jogar do menu.
+   
    * Fazer um dado de 6 lados para escolher o jogador que começará jogando.
    */
 
@@ -23,13 +19,15 @@ programa {
 
     inteiro
       dado = 0,
-      posicaoJogador1 = 1,
-      posicaoJogador2 = 1,
+      posicaoJogador1 = 0,
+      posicaoJogador2 = 0,
       pontuacaoJogador1 = 0,
       pontuacaoJogador2 = 0,
       jogadorAtual = 1, // Variável que salva a vez do jogador (jogadorAtual: 1 ou 2).
       impedirJogador = 0, // Variável para impedir o jogador de jogar a próxima rodada.
-      posicaoAuxiliar = 0 // Variável auxiliar para trocar as posições dos jogadores na funcionalidade da casa Nº 10.
+      posicaoAuxiliar = 0, // Variável auxiliar para trocar as posições dos jogadores na funcionalidade da casa Nº 10.
+      contagem = 3 // Variável para o temporizador que antece o jogo
+         
 
     enquanto (opcaoMenu != 3) {
       limpa()
@@ -41,7 +39,7 @@ programa {
       escreva("R: ")
       leia(opcaoMenu)
 
-     
+      limpa()
 
       escolha (opcaoMenu) {
         caso 1: {
@@ -49,20 +47,24 @@ programa {
            * 1. Jogar
            */
 
+      enquanto(contagem != 0){
+			  escreva("Disputa iniciando em: ", contagem, "...")
+			  u.aguarde(1000)
+			  contagem--
+			  limpa()
+		    }
 
           faca {
             // Começar o jogo sempre com as variáveis nos valores padrões
-            posicaoJogador1 = 1
-            posicaoJogador2 = 1
+            posicaoJogador1 = 0
+            posicaoJogador2 = 0
             jogadorAtual = 1
             impedirJogador = 0
-
-            
 
             enquanto (posicaoJogador1 < 20 e posicaoJogador2 < 20) {
               limpa()
             
-              dado = u.sorteia(1, 6)
+              dado = u.sorteia(1, 6) //Sorteio do numero da casa a ser ocupada pelo jogADOR
 
               se (jogadorAtual == 1) {
                 posicaoJogador1 = posicaoJogador1 + dado
@@ -271,14 +273,3 @@ programa {
     }
   }
 }
-/* $$$ Portugol Studio $$$ 
- * 
- * Esta seção do arquivo guarda informações do Portugol Studio.
- * Você pode apagá-la se estiver utilizando outro editor.
- * 
- * @POSICAO-CURSOR = 993; 
- * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
- * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
- * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
- */
