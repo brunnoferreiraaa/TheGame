@@ -47,12 +47,12 @@ programa {
            * 1. Jogar
            */
 
-          enquanto(contagem != 0) {
-			      escreva("Disputa iniciando em: ", contagem, "...")
-			      u.aguarde(1000)
-			      contagem--
-			      limpa()
-		      }
+          enquanto (contagem != 0) {
+            escreva("Disputa iniciando em: ", contagem, "...")
+            u.aguarde(1000)
+            contagem--
+	    limpa()
+          }
 
           faca {
             // Começar o jogo sempre com as variáveis nos valores padrões
