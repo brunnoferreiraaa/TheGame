@@ -47,12 +47,12 @@ programa {
            * 1. Jogar
            */
 
-      enquanto(contagem != 0){
-			  escreva("Disputa iniciando em: ", contagem, "...")
-			  u.aguarde(1000)
-			  contagem--
-			  limpa()
-		    }
+          enquanto(contagem != 0) {
+			      escreva("Disputa iniciando em: ", contagem, "...")
+			      u.aguarde(1000)
+			      contagem--
+			      limpa()
+		      }
 
           faca {
             // Começar o jogo sempre com as variáveis nos valores padrões
@@ -75,7 +75,7 @@ programa {
 
                 escreva("JOGADOR: ", jogadorAtual, "\n")
                 escreva("DADO: ", dado, "\n")
-                escreva("POSICAO ATUAL: ", posicaoJogador1, "/20 \n\n")
+                escreva("POSICAO ATUAL: ", posicaoJogador1, "/20\n\n")
 
                 /**
                  * Funcionalidades
@@ -106,23 +106,24 @@ programa {
                   posicaoJogador1 = posicaoJogador1 - 1
                   escreva("[CASA 12] O jogador 1 retrocedeu uma casa.\n\n")
                 }
-                senao se (posicaoJogador1 == 15) {
-                  faca{
-                 	escreva("Você terá de cantar uma canção ou sofrerá as consequências do composto V. \n\n")
-                 	escreva("Aceita o desafio ou irá sucumbir? [S/N]")
-                 	leia(respostaDesafio)
-                 	limpa()
-                 }enquanto(respostaDesafio != 'S' e respostaDesafio != 'N') //enquanto a  resposta for diferente de S e N a pergunta repete até que a condição seja atendida 
+                senao se (posicaoJogador2 == 15) {
+                  faca {
+                    escreva("[CASA 15] Você terá de cantar uma canção ou sofrerá as consequências do composto V.\n\n")
+                    escreva("Aceita o desafio ou irá sucumbir? (S/n)\nR: ")
+                    leia(respostaDesafio)
+                    limpa()
+                  }
+                  enquanto(respostaDesafio != 'S' e respostaDesafio != 's' e respostaDesafio != 'N' e respostaDesafio != 'n') // Enquanto a resposta for diferente de (S/s) e (N/n) a pergunta repete até que a condição seja atendida 
 
-                 se(respostaDesafio == 'S' ou respostaDesafio == 's'){ //verifica se a resposta é sim
-                 	escreva("Você provou que não é só mais um super... \n")
-                 	escreva("Continue jogando... \n ")
-                 }
-                 senao{ // se a resposta não é s e nem um caractere diferente de S ou N, então a resposta foi N  
-                 	escreva("Você é só mais um covarde... \n")
-                 	escreva("Terá de voltar duas casas por ter me desafiado! \n")
-                 	posicaoJogador1 = posicaoJogador1 - 2 //punição ao jogador -  voltar duas casas
-                 }
+                  se (respostaDesafio == 'S' ou respostaDesafio == 's') { // Verifica se a resposta é (S/s)
+                    escreva("Você provou que não é só mais um super...\n")
+                    escreva("Continue jogando...\n\n")
+                  }
+                  senao { // Se a resposta não é (S/s) e nem um caractere diferente de (S/s) ou (N/n), então a resposta foi (N/n)
+                    escreva("Você é só mais um covarde...\n")
+                    escreva("Terá de voltar duas casas por ter me desafiado!\n\n")
+                    posicaoJogador1 = posicaoJogador1 - 2 // Punição ao jogador: Voltar duas casas
+                  }
                 }
                 senao se (posicaoJogador1 == 19) {
                   // Voltar o jogador para casa (1)
@@ -146,7 +147,7 @@ programa {
 
                 escreva("JOGADOR: ", jogadorAtual, "\n")
                 escreva("DADO: ", dado, "\n")
-                escreva("POSICAO ATUAL: ", posicaoJogador2, "/20 \n\n")
+                escreva("POSICAO ATUAL: ", posicaoJogador2, "/20\n\n")
 
                 /**
                  * Funcionalidades
@@ -179,22 +180,23 @@ programa {
                   escreva("[CASA 12] O jogador 2 retrocedeu uma casa.\n\n")
                 }
                 senao se (posicaoJogador2 == 15) {
-                 faca{
-                 	escreva("Você terá de cantar uma canção ou sofrerá as consequências do composto V. \n\n")
-                 	escreva("Aceita o desafio ou irá sucumbir? [S/N]")
-                 	leia(respostaDesafio)
-                 	limpa()
-                 }enquanto(respostaDesafio != 'S' e respostaDesafio != 'N')
+                  faca {
+                    escreva("[CASA 15] Você terá de cantar uma canção ou sofrerá as consequências do composto V.\n\n")
+                    escreva("Aceita o desafio ou irá sucumbir? (S/n)\nR: ")
+                    leia(respostaDesafio)
+                    limpa()
+                  }
+                  enquanto(respostaDesafio != 'S' e respostaDesafio != 's' e respostaDesafio != 'N' e respostaDesafio != 'n') // Enquanto a resposta for diferente de (S/s) e (N/n) a pergunta repete até que a condição seja atendida 
 
-                 se(respostaDesafio == 'S' ou respostaDesafio == 's'){
-                 	escreva("Você provou que não é só mais um super... \n")
-                 	escreva("Continue jogando... \n ")
-                 }
-                 senao{
-                 	escreva("Você é só mais um covarde... \n")
-                 	escreva("Terá de voltar duas casas por ter me desafiado! \n")
-                 	posicaoJogador2 = posicaoJogador2 - 2
-                 }
+                  se (respostaDesafio == 'S' ou respostaDesafio == 's') { // Verifica se a resposta é (S/s)
+                    escreva("Você provou que não é só mais um super...\n")
+                    escreva("Continue jogando...\n\n")
+                  }
+                  senao { // Se a resposta não é (S/s) e nem um caractere diferente de (S/s) ou (N/n), então a resposta foi (N/n)
+                    escreva("Você é só mais um covarde...\n")
+                    escreva("Terá de voltar duas casas por ter me desafiado!\n\n")
+                    posicaoJogador2 = posicaoJogador2 - 2 // Punição ao jogador: Voltar duas casas
+                  }
                 }
                 senao se (posicaoJogador2 == 19) {
                   // Voltar o jogador para casa (1)
