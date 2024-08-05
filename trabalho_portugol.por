@@ -150,7 +150,7 @@ programa {
                   u.aguarde(2000)
                   escreva("EU NÃO SOU A CÓPIA...\n")
                   u.aguarde(2000)
-                  escreva("EU SOU O UPGRADE!!!\n|n")
+                  escreva("EU SOU O UPGRADE!!!\n\n")
                 }
                 senao se (posicaoJogador1 == 12) {
                   // Retroceder 1 casa
@@ -325,7 +325,7 @@ programa {
                     escreva("[CAPITÃO PÁTRIA]\n")
                     u.aguarde(1000)
                     escreva("O JOGO TÁ QUENTE PARA O SEU LADO, NÃO... \n \n")
-                    u.aguarde(2000)
+                    u.aguarde(3000)
                     limpa()
 
                     escreva("[SOLDIER BOY]\n")
@@ -369,7 +369,7 @@ programa {
                     u.aguarde(1000)
                     escreva("PENSEI QUE FOSSE MELHOR QUE ISTO...\n")
                     u.aguarde(2000)
-                    escreva("MAS É ISTO QUE TE RESUME AFINAL\n")
+                    escreva("MAS É ISTO QUE TE RESUME AFINAL\n\n")
                     u.aguarde(2000)
 
                     escreva("[SOLDIER BOY]\n")
@@ -412,6 +412,8 @@ programa {
 
             se (posicaoJogador1 == 20) {
               escreva("[CASA 20] Capitão Pátria Venceu!\n\n")
+	      escreva("[CAPITÃO PÁTRIA]\n")
+	      u.aguarde(1000)
               escreva("EU AVISEI...")
               u.aguarde(2000)
               escreva("EU SOU \n", u.aguarde(1000),  "O \n", u.aguarde(2000),"UPGRADE!\n")
@@ -420,6 +422,8 @@ programa {
             }
             senao se (posicaoJogador2 == 20) {
               escreva("[CASA 20] Soldier Boy Venceu!\n\n")
+	      escreva("[SOLDIER BOY]\n")
+	      u.aguarde(1000)
               escreva("NUNCA SE ESQUEÇA O QUÃO PATÉTICO QUE VOCÊ É...\n")
               u.aguarde(2000)
               escreva("NÃO OUSE SE COMPARAR A MIM...\n\n")
