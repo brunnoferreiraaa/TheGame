@@ -150,7 +150,7 @@ programa {
                   u.aguarde(2000)
                   escreva("EU NÃO SOU A CÓPIA...\n")
                   u.aguarde(2000)
-                  escreva("EU SOU O UPGRADE!!!\n")
+                  escreva("EU SOU O UPGRADE!!!\n|n")
                 }
                 senao se (posicaoJogador1 == 12) {
                   // Retroceder 1 casa
@@ -182,10 +182,10 @@ programa {
                     limpa()
                     escreva("[SOLDIER BOY]\n")
                     u.aguarde(1000)
-                    escreva("ESSE É MEU GAROTO...")
+                    escreva("ESSE É MEU GAROTO...\n")
                     u.aguarde(2000)
-                    escreva("TÁ SE TORNANDO UM HOMENZINHO...")
-                    u.aguarde(3000)
+                    escreva("TÁ SE TORNANDO UM HOMENZINHO...\n")
+                    u.aguarde(2000)
                     limpa()
 
                     escreva("Continue jogando...\n\n")
@@ -194,14 +194,14 @@ programa {
                     
                     escreva("[SOLDIER BOY]\n")
                     u.aguarde(1000)
-                    escreva("AINDA CONTINUA SENDO O MESMO DE SEMPRE...\n")
+                    escreva("AINDA CONTINUA SENDO O MESMO DE SEMPRE...\n\n")
                     u.aguarde(3000)
 
                     escreva("[CAPITÃO PÁTRIA]\n")
                     u.aguarde(1000)
                     escreva("QUIETO INSETO\n")
                     u.aguarde(2000)
-                    escreva("VOU TE ESMAGAARRR \n")
+                    escreva("VOU TE ESMAGAARRR \n\n")
                     u.aguarde(3000)
                     limpa()
                     escreva("Terá de voltar duas casas por ter desafiado o tabuleiro!\n\n")
@@ -216,7 +216,7 @@ programa {
                   u.aguarde(1000)
                   escreva("VOCÊ É SINÔNIMO DE FRACASSO!\n")
                   u.aguarde(3000)
-                  escreva("DEVIA TER VERGONHA DE FALAR QUE É SANGUE DO MEU SANGUE!\n ")
+                  escreva("DEVIA TER VERGONHA DE FALAR QUE É SANGUE DO MEU SANGUE!\n\n ")
                   u.aguarde(3000)
                   limpa()
 
@@ -230,7 +230,7 @@ programa {
                   u.aguarde(1000)
                   escreva("OLHA...\n")
                   u.aguarde(2000)
-                  escreva("ACHO QUE JÁ TÃO ESPERANDO LÁ TRÁS (tuFFFOO) HA HA AHA...\n")
+                  escreva("ACHO QUE JÁ TÃO ESPERANDO LÁ TRÁS (tuFFFOO) HA HA AHA...\n\n")
                   u.aguarde(3000)
                   limpa()
 
@@ -306,6 +306,17 @@ programa {
                 senao se (posicaoJogador2 == 12) {
                   // Retroceder 1 casa
                   posicaoJogador2 = posicaoJogador2 - 1
+
+		 escreva("[CAPITÃO PÁTRIA]\n")
+                  u.aguarde(1000)
+                  escreva("EU TINHA VOCÊ COMO MEU HERÓI DE INFÂNCIA...\n")
+                  u.aguarde(2000)
+
+                   escreva("[SOLDIER BOY]\n")
+                   u.aguarde(1000)
+                   escreva("( ͡° ͜ʖ ͡°)\n")
+                   u.aguarde(2000)
+                   limpa()	
                   escreva("[CASA 12] Soldier Boy retrocedeu uma casa.\n\n")
                 }
                 senao se (posicaoJogador2 == 15) {
@@ -340,14 +351,14 @@ programa {
 
                     escreva("[CAPITÃO PÁTRIA]\n")
                     u.aguarde(1000)
-                    escreva("VOCÊ ERA O ÚNICO QUASE TÃO FORTE QUANTO EU…\n")
+                    escreva("VOCÊ ERA O ÚNICO QUASE TÃO FORTE QUANTO EU…\n\n")
                     u.aguarde(2000)
 
                     escreva("[SOLDIER BOY]\n")
                     u.aguarde(1000)
                     escreva("SE ACHA FORTE AMIGO? \n")
                     u.aguarde(2000)
-                    escreva("TÁ USANDO UMA CAPA\n")
+                    escreva("TÁ USANDO UMA CAPA\n\n")
                     u.aguarde(2000)
                     limpa()
 
@@ -365,8 +376,9 @@ programa {
                     u.aguarde(1000)
                     escreva("AQUI É SOLDADO!  \n")
                     u.aguarde(2000)
-                    escreva("NÃO CANTO QUALQUER M...\n")
+                    escreva("NÃO CANTO QUALQUER M...\n\n")
                     u.aguarde(2000)
+		    limpa()		
 
                     escreva("Terá de voltar duas casas por ter  desafiado o tabuleiro!\n\n")
                     posicaoJogador2 = posicaoJogador2 - 2 // Punição ao jogador: Voltar duas casas
