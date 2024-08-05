@@ -1,13 +1,6 @@
 programa {
   inclua biblioteca Util --> u
 
-  /*
-   * IDEIAS:
-   * 
-   
-   * Fazer um dado de 6 lados para escolher o jogador que começará jogando.
-   */
-
   funcao inicio() {
     inteiro
       opcaoMenu = 0
@@ -55,6 +48,11 @@ programa {
           }
 
           faca {
+	    /** 
+             * `Faca`: Executa o jogo primeiro e ao terminar a rodada servirá para continuar (S/s) ou retornar ao menu (N/n).
+             * `Faca`: Caso contrário, será enviado uma mensagem de caractere inválido.
+             */
+
             // Começar o jogo sempre com as variáveis nos valores padrões
             posicaoJogador1 = 0
             posicaoJogador2 = 0
@@ -69,6 +67,7 @@ programa {
               se (jogadorAtual == 1) {
                 posicaoJogador1 = posicaoJogador1 + dado
 
+                // Caso a nova posição do jogador for maior que 20, ela será definida para 20 novamente e aparecer corretamente no `escreva` abaixo.
                 se (posicaoJogador1 > 20) {
                   posicaoJogador1 = 20
                 }
@@ -113,7 +112,7 @@ programa {
                     leia(respostaDesafio)
                     limpa()
                   }
-                  enquanto(respostaDesafio != 'S' e respostaDesafio != 's' e respostaDesafio != 'N' e respostaDesafio != 'n') // Enquanto a resposta for diferente de (S/s) e (N/n) a pergunta repete até que a condição seja atendida 
+                  enquanto (respostaDesafio != 'S' e respostaDesafio != 's' e respostaDesafio != 'N' e respostaDesafio != 'n') // Enquanto a resposta for diferente de (S/s) e (N/n) a pergunta repete até que a condição seja atendida 
 
                   se (respostaDesafio == 'S' ou respostaDesafio == 's') { // Verifica se a resposta é (S/s)
                     escreva("Você provou que não é só mais um super...\n")
@@ -141,6 +140,7 @@ programa {
               } senao {
                 posicaoJogador2 = posicaoJogador2 + dado
 
+                // Caso a nova posição do jogador for maior que 20, ela será definida para 20 novamente e aparecer corretamente no `escreva` abaixo.
                 se (posicaoJogador2 > 20) {
                   posicaoJogador2 = 20
                 }
@@ -186,7 +186,7 @@ programa {
                     leia(respostaDesafio)
                     limpa()
                   }
-                  enquanto(respostaDesafio != 'S' e respostaDesafio != 's' e respostaDesafio != 'N' e respostaDesafio != 'n') // Enquanto a resposta for diferente de (S/s) e (N/n) a pergunta repete até que a condição seja atendida 
+                  enquanto (respostaDesafio != 'S' e respostaDesafio != 's' e respostaDesafio != 'N' e respostaDesafio != 'n') // Enquanto a resposta for diferente de (S/s) e (N/n) a pergunta repete até que a condição seja atendida 
 
                   se (respostaDesafio == 'S' ou respostaDesafio == 's') { // Verifica se a resposta é (S/s)
                     escreva("Você provou que não é só mais um super...\n")
